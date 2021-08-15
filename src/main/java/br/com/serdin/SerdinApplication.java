@@ -16,6 +16,7 @@ public class SerdinApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SerdinApplication.class, args);
+		System.out.println("API RODANDO!");
 	}
 
 }
