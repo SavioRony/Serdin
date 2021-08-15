@@ -26,6 +26,10 @@ public class Endereco {
 
     private String complemento;
 
+    @ManyToOne
+    @JoinColumn(name = "id_cliente")
+    private Cliente cliente;
+
     public Endereco() {
     }
 

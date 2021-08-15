@@ -19,6 +19,8 @@ public class Cliente {
     private LocalDate dataNascimento;
     private String telefone;
     private String celular;
+
+    @OneToMany(mappedBy = "id")
     private List<Endereco> enderecos;
 
 
