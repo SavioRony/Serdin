@@ -1,5 +1,7 @@
 package br.com.serdin.model;
 
+import org.springframework.data.relational.core.sql.In;
+
 import javax.persistence.*;
 
 @Entity
@@ -8,7 +10,7 @@ public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     private String nome;
 
@@ -24,7 +26,7 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(Long id, String nome, String email, String senha, String tipo, String status) {
+    public Usuario(Integer id, String nome, String email, String senha, String tipo, String status) {
         this.id = id;
         this.nome = nome;
         this.email = email;
@@ -41,11 +43,11 @@ public class Usuario {
         this.status = status;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

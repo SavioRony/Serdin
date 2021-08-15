@@ -11,7 +11,7 @@ import java.util.List;
 public class Cliente {
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
     private String nome;
     @Column(unique = true)
     private String cpf;
@@ -33,7 +33,7 @@ public class Cliente {
         this.enderecos = enderecos;
     }
 
-    public Cliente(Long id, String nome, String cpf, LocalDate dataNascimento, String telefone, String celular, List<Endereco> enderecos) {
+    public Cliente(Integer id, String nome, String cpf, LocalDate dataNascimento, String telefone, String celular, List<Endereco> enderecos) {
         this.id = id;
         this.nome = nome;
         this.cpf = cpf;
@@ -43,11 +43,11 @@ public class Cliente {
         this.enderecos = enderecos;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
